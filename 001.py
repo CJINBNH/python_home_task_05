@@ -12,7 +12,7 @@ corch = random.randint(0, 1)
 while sweets > 0:
     if corch == 1:
         yourMove = int(input('Сколько конфет возьмёте? - '))
-        if 1 <= yourMove < 29 and sweets - yourMove > 0:
+        if 1 <= yourMove < 29 and sweets - yourMove >= 0:
             sweets -= yourMove
             print("осталось: ", sweets)
             corch = 0
@@ -26,8 +26,8 @@ while sweets > 0:
             print('Компьютер берёт', comp)
             print('осталось', sweets)
             corch = 1
-        elif 86 < sweets <= 114:
-            comp = sweets - 87
+        elif 86 <= sweets <= 114:
+            comp = sweets - 88
             if comp >= 1:
                 sweets -= comp
                 print('Компьютер берёт', comp)
